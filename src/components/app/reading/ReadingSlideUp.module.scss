@@ -1,0 +1,89 @@
+.slideup-container {
+  background-color: #fff;
+  width: 100vw;
+  position: absolute;
+  bottom: 12vh;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  transition: .5s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 99;
+  border-radius: 0.7em 0.7em 0 0;
+}
+
+.slideup-visible {
+  height: 63vh;
+  overflow: scroll;
+  transition: .5s ease;
+  padding: 3em;
+  box-shadow: 0px -10px 10px 0px rgb(49 133 170 / 30%);
+}
+
+.slideup-not-visible {
+  height: 0;
+  padding: 0;
+  box-shadow: 0;
+  transition: .5s ease;
+}
+
+.slideup-inside-container {
+  width: 40vw;
+  text-align: left;
+}
+
+.down-btn-container {
+  width: 40vw;
+  display: flex;
+}
+
+.up-btn-container {
+  width: 100vw;
+  padding-left: 30vw;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 12vh;
+  z-index: 89;
+  box-shadow: 0px 0px 10px 5px rgb(49 133 170 / 30%)
+}
+
+.up-btn-seethrough-container {
+  background-color: none;
+  position: absolute;
+  bottom: 0;
+  height: 12vh;
+  z-index: 100;
+}
+
+.up-btn-inside-container {
+  height: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.icon-up {
+  transform: rotate(180deg);
+  color: #3185A9;
+  font-size: 1.2em;
+}
+
+.icon-down {
+  color: #3185A9;
+  font-size: 1.2em;
+}
+
+.icon-text {
+  color: #3185A9;
+  margin-bottom: 0;
+  margin-left: 0.5em;
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}

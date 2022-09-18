@@ -1,0 +1,188 @@
+
+
+.player-wrap {
+  height: 12vh;
+  min-width: 30vw;
+  position: fixed;
+  z-index: 100;
+  bottom: 0;
+}
+.big-player-wrap {
+  height: 12vh;
+  min-width: 30vw;
+  position: fixed;
+  z-index: 100;
+  bottom: 0;
+  margin-left: -3.435em;
+}
+#player {
+  background: #fff;
+  position: relative;
+  margin: calc(6vh - 1.5em) auto;
+  border-radius: 0.7em;
+}
+.big-player {
+  max-width: 35vw;
+  max-height: 12vh;
+}
+.small-player {
+  max-width: 30vw !important;
+  max-height: 12vh !important;
+}
+
+.album {
+  height: 100%;
+  width: 100%;
+  border-radius: 0.7em;
+}
+.album img {
+  width: 100%;
+  border-radius: 0.7em;
+  object-fit: cover;
+  object-position: 50% 0;
+}
+
+.info {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.85);
+  transition: all 0.5s ease-in-out;
+}
+
+.progress-bar {
+  height: 5px;
+  width: 60%;
+  margin: 2em auto;
+  background: #b4deef;
+  border-radius: 10px;
+}
+
+.fill {
+  background-color: #3185aa;
+  width: 35%;
+  height: 0.3rem;
+  border-radius: 2px;
+}
+
+/* The slider itself */
+input[type="range"] {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 70%; /* Full-width */
+  height: 0.3rem; /* Specified height */
+  margin: 1.5em 15%;
+  background: #B3DEEF; /* Grey background */
+  overflow: hidden;
+  border-radius: 0.3em;
+  outline: none; /* Remove outline */
+}
+
+/* Mouse-over effects */
+input[type="range"]:hover {
+  cursor: pointer;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  width: 0.3rem;
+  -webkit-appearance: none;
+  height: 0.3rem;
+  border-radius: 50%;
+  box-shadow: -50vw 0 0 50vw #3185A9;
+}
+/** FF*/
+input[type="range"]::-moz-range-progress {
+  background-color: #3185A9; 
+}
+input[type="range"]::-moz-range-track {  
+  background-color: #B3DEEF;
+}
+/* IE*/
+input[type="range"]::-ms-fill-lower {
+  background-color: #3185A9; 
+}
+input[type="range"]::-ms-fill-upper {  
+  background-color: #B3DEEF;
+}
+
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 0.3rem; /* Set a specific slider handle width */
+  height: 0.3rem; /* Slider handle height */
+  border-radius: 50%;
+  background: #3185A9; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 0.3rem; /* Set a specific slider handle width */
+  height: 0.3rem; /* Slider handle height */
+  border-radius: 50%;
+  background: #3185A9; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.time--current,
+.time--total {
+  color: var(--dark);
+  font-size: 10px;
+  position: absolute;
+  margin-top: -2px;
+}
+
+.time--current {
+  left: 15px;
+}
+
+.time--total {
+  right: 15px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  justify-content: center;
+  color: #3185aa;
+  .play,
+  .pause {
+    color: #185976;
+    position: absolute;
+    top: 0.8em;
+    left: 5%;
+  }
+  .option {
+    left: 10px;
+    position: absolute;
+    font-size: 0.8em;
+  }
+  .add {
+    right: 10px;
+    position: absolute;
+    font-size: 0.8em;
+  }
+  .volume {
+    margin-right: 30px;
+    font-size: 0.8em;
+  }
+  .shuffle {
+    margin-left: 30px;
+    font-size: 0.8em;
+  }
+}
+
+.play,
+.pause,
+.next,
+.previous,
+.option,
+.add,
+.volume,
+.shuffle {
+  transition: all 0.5s ease;
+  &:hover {
+    color: #185976;
+    cursor: pointer;
+  }
+}
